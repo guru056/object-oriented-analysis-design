@@ -1,5 +1,7 @@
 package com.playalong.HashmapImplementation;
 
+import com.playalong.HashmapImplementation.SampleTestClass.Employee;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -38,5 +40,14 @@ public class HashMapUtility {
         mapListInteger.put(new ArrayList<>(Arrays.asList(1,2)), 2);
         System.out.println(mapListInteger);
         System.out.println(mapListInteger.size());
+
+        /******* <Employee,Integer> Map ***************/
+        Employee e1 = new Employee(1, "e1");
+        Employee e2 = new Employee(1, "e1");
+        HashMap<Employee,Integer> mapEmployeeInteger = new HashMap<>();
+        mapEmployeeInteger.put(e1, 1);
+        mapEmployeeInteger.put(e2, 1);
+        System.out.println(mapEmployeeInteger);
+        System.out.println(mapEmployeeInteger.size());
     }
 }
