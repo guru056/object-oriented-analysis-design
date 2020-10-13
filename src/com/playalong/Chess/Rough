@@ -1,0 +1,38 @@
+A chess is a game
+It has a board
+- Has A matrix with coordinates
+- Has ChessPiece
+- Chess Piece can be BLACK or WHITE
+- Chess Piece can be
+  - Pawn
+  - King
+  - Knight etc
+- Each chess piece has its own movement rule
+- It has two players
+- Each player has a set of pieces which will go on reducing.
+- Players take turns alternatively
+
+Entities -
+- ChessPiece
+- Board
+- Player
+- Game
+
+Enums
+- ChessPieceColor -> BLACK, WHITE
+- ChessPieceTypes -> soldier, king etc.
+
+
+Workflow -
+- As the game begins, board is initialised, list of pieces for each player is initialised.
+  First turn defaults to Black.
+- The player chooses a chess piece and makes a move. For some pieces,
+  destination position has to be provided. For others system can calculate.
+- We check if the destination position has a chess piece of the other color.
+  If yes we remove that piece from the players list.
+- We check for game over condition.
+- We check for check condition
+- Alter the turn
+
+
+

@@ -54,6 +54,7 @@ public class LRU<K,V> {
     public void set(K key, V value) {
         Node<K, V> node = this.map.get(key);
         if (node != null) {
+            node.setData(value);
             this.dll.moveToFirst(node);
             return;
         }

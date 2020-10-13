@@ -21,6 +21,10 @@ public class Node<K,V> {
 
     public K getKey() { return key; }
 
+    public void setData(V data) {
+        this.data = data;
+    }
+
     @Override
     public String toString() {
         return "Node{" +

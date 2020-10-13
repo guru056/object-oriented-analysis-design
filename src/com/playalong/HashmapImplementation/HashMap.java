@@ -4,17 +4,17 @@ import java.util.Objects;
 
 public class HashMap<K,V> {
 
-    static final int DEFAULT_FINAL_CAPACITY = 1 << 4;
-    static final float DEFAULT_LOAD_FACTOR = 0.75f;
+    private static final int DEFAULT_INITIAL_CAPACITY = 1 << 4;
+    private static final float DEFAULT_LOAD_FACTOR = 0.75f;
 
     private int initialCapacity;
     private float loadFactor;
     private int size;
-    Node[] nodes;
+    private Node[] nodes;
 
     /***************  Constructors   *******************/
     public HashMap() {
-        this.initialCapacity = DEFAULT_FINAL_CAPACITY;
+        this.initialCapacity = DEFAULT_INITIAL_CAPACITY;
         this.loadFactor = DEFAULT_LOAD_FACTOR;
         this.nodes = new Node[this.initialCapacity];
         this.size = 0;
